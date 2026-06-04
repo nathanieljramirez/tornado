@@ -29,10 +29,10 @@ const style = (() => {
     bgWhite: 47,
   };
 
-  const x: Record<keyof typeof s, (text: string) => string> = {} as any;
+  const x = {};
   for (const key in s) {
     if (Object.prototype.hasOwnProperty.call(s, key)) {
-      x[key] = (text: string) => `\x1b[${s[key]}m${text}\x1b[0m`;
+      x[key] = (text) => `\x1b[${s[key]}m${text}\x1b[0m`;
     }
   }
   return x;
@@ -44,8 +44,8 @@ const presets = {
 };
 
 class tornado {
-  private interval: NodeJS.Timeout | null = null;
-  private write(text: string) {
+  private interval = null;
+  private write(text) {
     stdout.write(text);
     if (this.interval) {
       clearInterval(this.interval);
@@ -57,10 +57,6 @@ class tornado {
     frames = presets.arc,
     speed = 75,
     text,
-  }: {
-    frames?: string[];
-    speed?: number;
-    text: string;
   }) {
     let i = 0;
 
@@ -70,8 +66,8 @@ class tornado {
     }, speed);
   }
 
-  private d(s: string) {
-    return ({ text, symbol = s }: { text: string; symbol?: string }) => {
+  private d(s) {
+    return ({ text, symbol = s }) => {
       this.write(`\r${symbol} ${text}\n`);
     };
   }
