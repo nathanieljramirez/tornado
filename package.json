@@ -10,11 +10,9 @@
   "main": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "tsx test",
-    "build": "tsx build.ts && tsc"
+    "test": "tsx test"
   },
   "devDependencies": {
-    "@hyrious/esbuild-plugin-commonjs": "^0.2.4",
     "@types/node": "^20.14.12",
     "esbuild": "^0.23.0",
     "tsx": "^4.16.2",
