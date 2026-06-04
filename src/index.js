@@ -1,4 +1,4 @@
-import { stdout } from "process";
+const { stdout } = require("process");
 
 const style = (() => {
   const s = {
@@ -77,4 +77,4 @@ class tornado {
   warn = this.d(style.yellow("▲"));
 }
 
-export { style, presets, tornado };
+module.exports = { style, presets, tornado };
