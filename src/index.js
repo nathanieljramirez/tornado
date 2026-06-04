@@ -44,8 +44,8 @@ const presets = {
 };
 
 class tornado {
-  private interval = null;
-  private write(text) {
+  interval = null;
+  write(text) {
     stdout.write(text);
     if (this.interval) {
       clearInterval(this.interval);
@@ -66,7 +66,7 @@ class tornado {
     }, speed);
   }
 
-  private d(s) {
+  d(s) {
     return ({ text, symbol = s }) => {
       this.write(`\r${symbol} ${text}\n`);
     };
