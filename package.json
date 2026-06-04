@@ -4,12 +4,17 @@
   "version": "1.0.1",
   "license": "MIT",
   "files": [
-    "src",
-    "LICENSE",
-    "README.md"
+    "src"
   ],
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./src/index.js",
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  },
   "scripts": {
     "test": "node test/index.js"
   }
