@@ -10,10 +10,9 @@
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
-    "test": "tsx test"
+    "test": "node test/index.js"
   },
   "devDependencies": {
-    "@types/node": "^20.14.12",
-    "tsx": "^4.16.2"
+    "@types/node": "^20.14.12"
   }
 }
