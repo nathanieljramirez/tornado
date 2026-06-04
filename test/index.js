@@ -1,4 +1,4 @@
-import { tornado, presets, style } from "../src";
+const { tornado, presets, style } = require("../src/index.js");
 
 const spinner = new tornado({
   frames: presets.arc.map((frame) => style.blue(frame)),
