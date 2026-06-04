@@ -4,7 +4,8 @@
   "version": "1.0.1",
   "license": "MIT",
   "files": [
-    "dist",
+    "src",
+    "LICENSE",
     "README.md"
   ],
   "main": "src/index.js",
