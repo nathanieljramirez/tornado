@@ -11,8 +11,5 @@
   "types": "src/index.d.ts",
   "scripts": {
     "test": "node test/index.js"
-  },
-  "devDependencies": {
-    "@types/node": "^20.14.12"
   }
 }
